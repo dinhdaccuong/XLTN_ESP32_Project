@@ -18,7 +18,7 @@ extern "C"
 typedef struct
 {
 	uint8_t times;
-	uint8_t duration;
+	uint16_t duration;
 	uint8_t interval;
 } buzzer_t;
 

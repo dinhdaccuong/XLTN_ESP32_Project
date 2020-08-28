@@ -128,4 +128,6 @@ C:\Users\Cuong\AppData\Local\Temp\VMBuilds\Arduino_Exchange_Data\esp32_lolin32\D
  C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4\cores\esp32/HardwareSerial.h \
  C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4\cores\esp32/Esp.h \
  C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4\variants\lolin32/pins_arduino.h \
- C:\Users\Cuong\AppData\Local\Temp\VMBuilds\Arduino_Exchange_Data\esp32_lolin32\Debug\led_control.h
+ C:\Users\Cuong\AppData\Local\Temp\VMBuilds\Arduino_Exchange_Data\esp32_lolin32\Debug\led_control.h \
+ C:\Users\Cuong\AppData\Local\Temp\VMBuilds\Arduino_Exchange_Data\esp32_lolin32\Debug\sound.h \
+ C:\Users\Cuong\AppData\Local\Temp\VMBuilds\Arduino_Exchange_Data\esp32_lolin32\Debug\buzzer_control.h

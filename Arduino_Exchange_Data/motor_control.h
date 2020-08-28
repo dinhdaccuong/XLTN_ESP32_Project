@@ -20,6 +20,17 @@ extern "C"
 #define PWM_RESOLUTION		8
 #define PWM_PIN				MOTOR_ENABLE_PIN
 #define DUTY_CYCLE			255
+#define MOTOR_TIME_WAIT		1500	// 1000 ms
+#define MOTOR_SPEED			200
+
+	enum motor_status
+	{
+		MOTOR_TURN_LEFT,
+		MOTOR_TURN_RIGHT,
+		MOTOR_STOP
+	};
+
+	typedef motor_status motor_status_e;
 
 	// clang-format on
 	/*******************************************************************************
@@ -33,7 +44,7 @@ extern "C"
 	void motor_turnLeft(uint8_t speed);
 	void motor_turnRight(uint8_t speed);
 	void motor_stop();
-
+	void motor_control(ReceiveCommand command);
 #ifdef __cplusplus
 }
 #endif

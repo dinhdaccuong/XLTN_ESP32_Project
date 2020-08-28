@@ -128,40 +128,10 @@ C:\Users\Cuong\AppData\Local\Temp\VMBuilds\Arduino_Exchange_Data\esp32_lolin32\D
  C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4\cores\esp32/Esp.h \
  C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4\cores\esp32/Arduino.h \
  C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4\variants\lolin32/pins_arduino.h \
- C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4\libraries\BLE\src/BLEDevice.h \
- C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4/tools/sdk/include/bt/esp_gap_ble_api.h \
- C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4/tools/sdk/include/bt/esp_bt_defs.h \
- C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4/tools/sdk/include/bt/esp_gattc_api.h \
- C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4/tools/sdk/include/bt/esp_gatt_defs.h \
- C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4/tools/sdk/include/bt/esp_bt.h \
- C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4/tools/sdk/include/esp32/esp_task.h \
- C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4/tools/sdk/include/freertos/freertos/FreeRTOSConfig.h \
- C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4\libraries\BLE\src/BLEServer.h \
- C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4/tools/sdk/include/bt/esp_gatts_api.h \
- C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4\libraries\BLE\src/BLEUUID.h \
- C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4/tools/sdk/include/bt/esp_gatt_defs.h \
- C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4\libraries\BLE\src/BLEAdvertising.h \
- C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4\libraries\BLE\src/FreeRTOS.h \
- C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4/tools/sdk/include/esp_ringbuf/freertos/ringbuf.h \
- C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4/tools/sdk/include/freertos/freertos/queue.h \
- C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4\libraries\BLE\src/BLECharacteristic.h \
- C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4\libraries\BLE\src/BLEDescriptor.h \
- C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4\libraries\BLE\src/BLEValue.h \
- C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4\libraries\BLE\src/BLEService.h \
- C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4\libraries\BLE\src/BLESecurity.h \
- C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4\libraries\BLE\src/BLEAddress.h \
- C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4\libraries\BLE\src/BLEClient.h \
- C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4\libraries\BLE\src/BLERemoteService.h \
- C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4\libraries\BLE\src/BLERemoteCharacteristic.h \
- C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4\libraries\BLE\src/BLERemoteDescriptor.h \
- C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4\libraries\BLE\src/BLEAdvertisedDevice.h \
- C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4\libraries\BLE\src/BLEScan.h \
- C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4\libraries\BLE\src/BLEUtils.h \
- C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4\libraries\BLE\src/BLEUtils.h \
- C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4\libraries\BLE\src/BLEServer.h \
- C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4\libraries\BLE\src/BLE2902.h \
  C:\Users\Cuong\AppData\Local\Temp\VMBuilds\Arduino_Exchange_Data\esp32_lolin32\Debug\config.h \
  C:\Users\Cuong\AppData\Local\Temp\VMBuilds\Arduino_Exchange_Data\esp32_lolin32\Debug\motor_control.h \
  C:\Users\Cuong\AppData\Local\Temp\VMBuilds\Arduino_Exchange_Data\esp32_lolin32\Debug\led_control.h \
+ C:\Users\Cuong\AppData\Local\Temp\VMBuilds\Arduino_Exchange_Data\esp32_lolin32\Debug\sound.h \
  C:\Users\Cuong\AppData\Local\Temp\VMBuilds\Arduino_Exchange_Data\esp32_lolin32\Debug\buzzer_control.h \
- C:\Users\Cuong\AppData\Local\Temp\VMBuilds\Arduino_Exchange_Data\esp32_lolin32\Debug\lcd_control.h
+ C:\Users\Cuong\AppData\Local\Temp\VMBuilds\Arduino_Exchange_Data\esp32_lolin32\Debug\lcd_control.h \
+ C:\Users\Cuong\AppData\Local\Temp\VMBuilds\Arduino_Exchange_Data\esp32_lolin32\Debug\my_ble.h

@@ -71,6 +71,7 @@ void buzzer_init()
 void buzzer_start(buzzer_p p_buzzer)
 {
 	g_buzzer = p_buzzer;
+	timerRestart(timerBuzzer);
 	timerAlarmWrite(timerBuzzer, 0, false);
 	timerAlarmEnable(timerBuzzer);
 }

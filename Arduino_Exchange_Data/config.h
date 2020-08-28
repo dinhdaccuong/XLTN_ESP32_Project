@@ -55,6 +55,7 @@ extern "C"
 #define LCD_D7					22
 
 #define TIMER_BUZZER			0
+#define TIMER_MOTOR				1
 	// clang-format on
 	/*******************************************************************************
 	**                     EXTERNAL VARIABLE DECLARATIONS

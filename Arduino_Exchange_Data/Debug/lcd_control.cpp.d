@@ -28,4 +28,5 @@ C:\Users\Cuong\AppData\Local\Temp\VMBuilds\Arduino_Exchange_Data\esp32_lolin32\D
  C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4/tools/sdk/include/newlib/sys/string.h \
  C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4/tools/sdk/include/newlib/ctype.h \
  C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4\cores\esp32/pgmspace.h \
- C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4\cores\esp32/Printable.h
+ C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4\cores\esp32/Printable.h \
+ C:\Users\Cuong\AppData\Local\Temp\VMBuilds\Arduino_Exchange_Data\esp32_lolin32\Debug\string_define.h

@@ -4,7 +4,7 @@
 #include "lcd_control.h"
 #include "config.h"
 #include "LiquidCrystal.h"
-
+#include "string_define.h"
 /*******************************************************************************
 **                       INTERNAL MACRO DEFINITIONS
 *******************************************************************************/
@@ -29,6 +29,19 @@ LiquidCrystal lcd(LCD_RS, LCD_EN, LCD_D4, LCD_D5, LCD_D6, LCD_D7);
 void lcd_init()
 {
 	lcd.begin(16, 2);
+	lcd.clear();
+	lcd_write_string(STRING_STATUS);
+	lcd.setCursor(X_LINE_STATUS, Y_LINE_STATUS);
+	lcd_write_string(STRING_DISCONNECTED);
+
+	lcd.setCursor(0, 1);
+	lcd_write_string(STRING_COMMAND);
+	lcd.setCursor(X_LINE_COMMAND, Y_LINE_COMMAND);
+	lcd_write_string(STRING_NONE);
+}
+
+void lcd_clean()
+{
 	lcd.clear();
 }
 void lcd_write_char(char c)
