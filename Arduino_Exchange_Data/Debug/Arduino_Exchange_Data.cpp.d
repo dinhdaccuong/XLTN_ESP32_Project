@@ -159,4 +159,8 @@ C:\Users\Cuong\AppData\Local\Temp\VMBuilds\Arduino_Exchange_Data\esp32_lolin32\D
  C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4\libraries\BLE\src/BLEUtils.h \
  C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4\libraries\BLE\src/BLEUtils.h \
  C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4\libraries\BLE\src/BLEServer.h \
- C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4\libraries\BLE\src/BLE2902.h
+ C:\Users\Cuong\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.4\libraries\BLE\src/BLE2902.h \
+ C:\Users\Cuong\AppData\Local\Temp\VMBuilds\Arduino_Exchange_Data\esp32_lolin32\Debug\config.h \
+ C:\Users\Cuong\AppData\Local\Temp\VMBuilds\Arduino_Exchange_Data\esp32_lolin32\Debug\motor_control.h \
+ C:\Users\Cuong\AppData\Local\Temp\VMBuilds\Arduino_Exchange_Data\esp32_lolin32\Debug\led_control.h \
+ C:\Users\Cuong\AppData\Local\Temp\VMBuilds\Arduino_Exchange_Data\esp32_lolin32\Debug\buzzer_control.h

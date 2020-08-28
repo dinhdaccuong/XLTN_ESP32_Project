@@ -3,30 +3,10 @@
 #include <BLEUtils.h>
 #include <BLEServer.h>
 #include <BLE2902.h>
-
-enum ResponseCommand
-{
-    RES_TURNED_ON_LED,
-    RES_TURNED_OFF_LED,
-    RES_GO_MOTOR,
-    RES_LEFT_MOTOR,
-    RES_RIGHT_MOTOR,
-    RES_STOP_MOTOR
-};
-
-enum ReceiveCommand
-{
-    COMMAND_TURN_ON_LED,
-    COMMAND_TURN_OFF_LED,
-    COMMAND_GO_MOTOR,
-    COMMAND_LEFT_MOTOR,
-    COMMAND_RIGHT_MOTOR,
-    COMMAND_STOP_MOTOR
-};
-
-#define SERVICE_UUID        "4fafc201-1fb5-459e-8fcc-c5c9c331914b"
-#define CHARACTERISTIC_UUID "beb5483e-36e1-4688-b7f5-ea07361b26a8"
-#define DESCRIPTOR_UUID     "1485cb0c-db0d-11ea-87d0-0242ac130003"
+#include "config.h"
+#include "motor_control.h"
+#include "led_control.h"
+#include "buzzer_control.h"
 
 bool isConnected = false;
 BLECharacteristic* pCharacteristic;
@@ -97,35 +77,40 @@ class ServerCallback : public BLEServerCallbacks
 void setup() {
     Serial.begin(115200);
 
-    BLEDevice::init("BLE_Exchange_Data");
+    led_init();
+    buzzer_init();
+    buzzer_start(BUZZER_TYPE_0);
+    //motor_init();
+    //motor_turnLeft(127);
+    //BLEDevice::init("BLE_Exchange_Data");
 
-    BLE2902* pDescriptor = new BLE2902();
+    //BLE2902* pDescriptor = new BLE2902();
 
-    pDescriptor->setValue("Hello");
-    pDescriptor->setCallbacks(new DescriptorCallback_Charact1());
+    //pDescriptor->setValue("Hello");
+    //pDescriptor->setCallbacks(new DescriptorCallback_Charact1());
 
-    pCharacteristic = new BLECharacteristic(CHARACTERISTIC_UUID,
-        BLECharacteristic::PROPERTY_READ |
-        BLECharacteristic::PROPERTY_WRITE |
-        BLECharacteristic::PROPERTY_NOTIFY);
+    //pCharacteristic = new BLECharacteristic(CHARACTERISTIC_UUID,
+    //    BLECharacteristic::PROPERTY_READ |
+    //    BLECharacteristic::PROPERTY_WRITE |
+    //    BLECharacteristic::PROPERTY_NOTIFY);
 
-    pCharacteristic->setValue("Phan Thu Hang");
-    pCharacteristic->addDescriptor(pDescriptor);
-    pCharacteristic->setCallbacks(new CharacteristicCallback1());
+    //pCharacteristic->setValue("Phan Thu Hang");
+    //pCharacteristic->addDescriptor(pDescriptor);
+    //pCharacteristic->setCallbacks(new CharacteristicCallback1());
 
-    BLEServer* pServer = BLEDevice::createServer();
-    pServer->setCallbacks(new ServerCallback());
-    BLEService* pService = pServer->createService(SERVICE_UUID);
-    pService->addCharacteristic(pCharacteristic);
-    pService->start();
+    //BLEServer* pServer = BLEDevice::createServer();
+    //pServer->setCallbacks(new ServerCallback());
+    //BLEService* pService = pServer->createService(SERVICE_UUID);
+    //pService->addCharacteristic(pCharacteristic);
+    //pService->start();
 
-    BLEAdvertising* pAdvertising = BLEDevice::getAdvertising();
-    pAdvertising->addServiceUUID(SERVICE_UUID);
-    pAdvertising->setScanResponse(true);
-    pAdvertising->setMinPreferred(0x06);  // functions that help with iPhone connections issue
-    pAdvertising->setMinPreferred(0x12);
-    BLEDevice::startAdvertising();
-    Serial.println("Characteristic defined! Now you can read it in your phone!");
+    //BLEAdvertising* pAdvertising = BLEDevice::getAdvertising();
+    //pAdvertising->addServiceUUID(SERVICE_UUID);
+    //pAdvertising->setScanResponse(true);
+    //pAdvertising->setMinPreferred(0x06);  // functions that help with iPhone connections issue
+    //pAdvertising->setMinPreferred(0x12);
+    //BLEDevice::startAdvertising();
+    //Serial.println("Characteristic defined! Now you can read it in your phone!");s
 }
 
 uint8_t value = 32;

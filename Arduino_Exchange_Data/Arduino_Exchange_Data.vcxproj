@@ -116,7 +116,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="config.h" />
+    <ClInclude Include="led_control.h" />
+    <ClInclude Include="motor_control.h" />
     <ClInclude Include="__vm\.Arduino_Exchange_Data.vsarduino.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="led_control.cpp" />
+    <ClCompile Include="motor_control.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
