@@ -18,56 +18,42 @@
 **                      INTERNAL VARIABLE DEFINITIONS
 *******************************************************************************/
 hw_timer_t* timerBuzzer = NULL;
-buzzer_t buzzer_type_0 = { 2, 1, 1 };
-buzzer_t buzzer_type_1 = { 2, 500, 500 };
+buzzer_t* g_buzzer = NULL;		// global buzzer
 /*******************************************************************************
 **                      INTERNAL FUNCTION PROTOTYPES
 *******************************************************************************/
-buzzer_type g_buzzer_type;
 
 void IRAM_ATTR onTimerBuzzer()
 {
-	static uint8_t nTimeBuzzer0 = 0;
-	static uint8_t buzzer0_status = 0; // off
-	static uint8_t nTimeBuzzer1 = 0;
-	static uint8_t buzzer1_status = 0; // off
-	switch (g_buzzer_type)
+
+	static uint8_t buzzer_status = 0; // off
+	static uint8_t buzzer_nSound = 0;	// number of sound
+
+	if (!buzzer_status)
 	{
-	case BUZZER_TYPE_0:
-		if (!buzzer0_status )
+		if (buzzer_nSound < g_buzzer->times)
 		{
-			//Serial.println("buzzer ON");
-			if (nTimeBuzzer0 < buzzer_type_0.times)
-			{
-				Serial.println("buzzer ON");
-				buzzer0_status = 1;
-				digitalWrite(BUZZER_PIN, HIGH);
-				nTimeBuzzer0++;		
-				timerRestart(timerBuzzer);
-				timerAlarmWrite(timerBuzzer, ONE_MILLION, false);
-				timerAlarmEnable(timerBuzzer);
-			}
-			else
-			{
-				nTimeBuzzer0 = 0;
-				buzzer0_status = 0; // off
-				timerStop(timerBuzzer);
-			}
+			buzzer_status = 1;
+			buzzer_turnOn();
+			buzzer_nSound++;
+			timerRestart(timerBuzzer);
+			timerAlarmWrite(timerBuzzer, g_buzzer->duration * ONE_THOUSAND, false);
+			timerAlarmEnable(timerBuzzer);
 		}
 		else
 		{
-			Serial.println("buzzer Off");
-			buzzer0_status = 0;
-			digitalWrite(BUZZER_PIN, LOW);
-			timerRestart(timerBuzzer);
-			timerAlarmWrite(timerBuzzer, ONE_MILLION, false);
-	
-			timerAlarmEnable(timerBuzzer);	
-		
+			buzzer_nSound = 0;
+			buzzer_status = 0; // off
+			timerStop(timerBuzzer);
 		}
-		break;
-	case BUZZER_TYPE_1:
-		break;
+	}
+	else
+	{
+		buzzer_status = 0;
+		buzzer_turnOff();
+		timerRestart(timerBuzzer);
+		timerAlarmWrite(timerBuzzer, g_buzzer->interval * ONE_THOUSAND, false);
+		timerAlarmEnable(timerBuzzer);
 	}
 }
 /*******************************************************************************
@@ -77,24 +63,23 @@ void IRAM_ATTR onTimerBuzzer()
 void buzzer_init()
 {
 	pinMode(BUZZER_PIN, OUTPUT);
-	digitalWrite(BUZZER_PIN, LOW);	// turn off the buzzer
+	buzzer_turnOff();
 	timerBuzzer = timerBegin(TIMER_BUZZER, 80, true);
 	timerAttachInterrupt(timerBuzzer, &onTimerBuzzer, true);
-	//yield();
 }
 
-void buzzer_start(buzzer_type buzzer_tp)
+void buzzer_start(buzzer_p p_buzzer)
 {
-	g_buzzer_type = buzzer_tp;
+	g_buzzer = p_buzzer;
 	timerAlarmWrite(timerBuzzer, 0, false);
 	timerAlarmEnable(timerBuzzer);
 }
 void buzzer_turnOn()
 {
-
+	digitalWrite(BUZZER_PIN, HIGH);	// turn off the buzzer
 }
 void buzzer_turnOff()
 {
-
+	digitalWrite(BUZZER_PIN, LOW);	// turn off the buzzer
 }
 /******************************** End of file *********************************/

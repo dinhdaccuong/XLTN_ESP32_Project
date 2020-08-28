@@ -35,6 +35,7 @@ extern "C"
 	};
 
 #define ONE_MILLION				1000000
+#define ONE_THOUSAND			1000
 #define SERVICE_UUID			"4fafc201-1fb5-459e-8fcc-c5c9c331914b"
 #define CHARACTERISTIC_UUID		"beb5483e-36e1-4688-b7f5-ea07361b26a8"
 #define DESCRIPTOR_UUID			"1485cb0c-db0d-11ea-87d0-0242ac130003"

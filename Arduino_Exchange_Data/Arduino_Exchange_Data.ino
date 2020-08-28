@@ -8,6 +8,7 @@
 #include "led_control.h"
 #include "buzzer_control.h"
 
+buzzer_t buzzer_connected = { 3, 500, 500 };
 bool isConnected = false;
 BLECharacteristic* pCharacteristic;
 void executeCommnand(byte* pData);
@@ -79,7 +80,7 @@ void setup() {
 
     led_init();
     buzzer_init();
-    buzzer_start(BUZZER_TYPE_0);
+    buzzer_start(&buzzer_connected);
     //motor_init();
     //motor_turnLeft(127);
     //BLEDevice::init("BLE_Exchange_Data");

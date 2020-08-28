@@ -24,11 +24,6 @@ typedef struct
 
 typedef buzzer_t* buzzer_p;
 
-enum buzzer_type
-{
-	BUZZER_TYPE_0,
-	BUZZER_TYPE_1
-};
 	// clang-format on
 	/*******************************************************************************
 	**                     EXTERNAL VARIABLE DECLARATIONS
@@ -38,7 +33,7 @@ enum buzzer_type
 	**                     EXTERNAL FUNCTION DECLARATIONS
 	*******************************************************************************/
 	void buzzer_init();
-	void buzzer_start(buzzer_type buzzer_tp);
+	void buzzer_start(buzzer_p p_buzzer);
 	void buzzer_turnOn();
 	void buzzer_turnOff();
 #ifdef __cplusplus
