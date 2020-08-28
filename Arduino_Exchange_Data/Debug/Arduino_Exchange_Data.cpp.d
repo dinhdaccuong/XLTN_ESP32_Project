@@ -163,4 +163,5 @@ C:\Users\Cuong\AppData\Local\Temp\VMBuilds\Arduino_Exchange_Data\esp32_lolin32\D
  C:\Users\Cuong\AppData\Local\Temp\VMBuilds\Arduino_Exchange_Data\esp32_lolin32\Debug\config.h \
  C:\Users\Cuong\AppData\Local\Temp\VMBuilds\Arduino_Exchange_Data\esp32_lolin32\Debug\motor_control.h \
  C:\Users\Cuong\AppData\Local\Temp\VMBuilds\Arduino_Exchange_Data\esp32_lolin32\Debug\led_control.h \
- C:\Users\Cuong\AppData\Local\Temp\VMBuilds\Arduino_Exchange_Data\esp32_lolin32\Debug\buzzer_control.h
+ C:\Users\Cuong\AppData\Local\Temp\VMBuilds\Arduino_Exchange_Data\esp32_lolin32\Debug\buzzer_control.h \
+ C:\Users\Cuong\AppData\Local\Temp\VMBuilds\Arduino_Exchange_Data\esp32_lolin32\Debug\lcd_control.h

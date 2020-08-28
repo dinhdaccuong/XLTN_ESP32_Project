@@ -9,7 +9,7 @@ extern "C"
 	/*******************************************************************************
 	**                               INCLUDES
 	*******************************************************************************/
-
+#include "stdint.h"
 	/*******************************************************************************
 	**                                DEFINES
 	*******************************************************************************/
@@ -26,8 +26,7 @@ extern "C"
 	void lcd_init();
 	void lcd_write_char(char c);
 	void lcd_write_string(char* pc);
-	void lcd_enter_line();
-	void lcd_first_line();
+	void lcd_set_cursor(uint8_t y, uint8_t x);
 #ifdef __cplusplus
 }
 #endif

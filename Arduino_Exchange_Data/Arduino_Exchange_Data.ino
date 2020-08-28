@@ -7,6 +7,7 @@
 #include "motor_control.h"
 #include "led_control.h"
 #include "buzzer_control.h"
+#include "lcd_control.h"
 
 buzzer_t buzzer_connected = { 3, 500, 500 };
 bool isConnected = false;
@@ -79,8 +80,11 @@ void setup() {
     Serial.begin(115200);
 
     led_init();
-    buzzer_init();
-    buzzer_start(&buzzer_connected);
+    //buzzer_init();
+    //buzzer_start(&buzzer_connected);
+    lcd_init();
+    lcd_set_cursor(4, 1);
+    lcd_write_char('c');
     //motor_init();
     //motor_turnLeft(127);
     //BLEDevice::init("BLE_Exchange_Data");
