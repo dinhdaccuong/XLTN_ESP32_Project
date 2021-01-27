@@ -1,4 +1,4 @@
-#include "config.h"
+﻿#include "config.h"
 #include "motor_control.h"
 #include "led_control.h"
 #include "buzzer_control.h"
@@ -7,15 +7,16 @@
 #include "sound.h"
 
 void setup() {
-    buzzer_init();
-    buzzer_start(&sound_init);
-    my_ble_init();
-    lcd_init();   
-    motor_init();
-    led_init();
+    buzzer_init();      // khởi tạo chương trình cho còi
+    buzzer_start(&sound_init);  // bật còi
+    my_ble_init();      // Khởi tạo BLE - Bluetooth Low Energy
+    lcd_init();             // Khởi tạo LCD
+    motor_init();           // Khởi tạo motor
+    led_init();         // Khở tạo led
 }
 
 void loop() {
+
 }
 
 

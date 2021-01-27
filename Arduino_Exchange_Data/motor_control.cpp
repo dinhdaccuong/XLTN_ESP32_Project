@@ -1,4 +1,4 @@
-/*******************************************************************************
+﻿/*******************************************************************************
 **                                INCLUDES
 *******************************************************************************/
 #include "config.h"
@@ -48,7 +48,7 @@ void IRAM_ATTR onTimerMotor()
 		break;
 	}
 }
-void motor_init()
+void motor_init()			// Khởi tạo motor
 {
 	pinMode(MOTOR_ENABLE_PIN, OUTPUT);
 	pinMode(MOTOR_CONTROL1_PIN, OUTPUT);
@@ -105,26 +105,26 @@ void motor_control(ReceiveCommand command)
 		break;
 	}
 }
-void motor_turnLeft(uint8_t speed)
+void motor_turnLeft(uint8_t speed)  // Quay trái motor
 {
 	digitalWrite(MOTOR_CONTROL1_PIN, LOW);
 	digitalWrite(MOTOR_CONTROL2_PIN, HIGH);
 	ledcWrite(PWM_CHANNEL, MOTOR_SPEED);
 }
-void motor_turnRight(uint8_t speed)
+void motor_turnRight(uint8_t speed)	// Quay phải motor
 {
 	digitalWrite(MOTOR_CONTROL1_PIN, HIGH);
 	digitalWrite(MOTOR_CONTROL2_PIN, LOW);
 	ledcWrite(PWM_CHANNEL, MOTOR_SPEED);
 }
-void motor_stop()
+void motor_stop()		// stop motor
 {
 	digitalWrite(MOTOR_CONTROL1_PIN, LOW);
 	digitalWrite(MOTOR_CONTROL2_PIN, LOW);
 	ledcWrite(PWM_CHANNEL, 0);
 }
 
-void motorTimerStart(uint16_t time)
+void motorTimerStart(uint16_t time)	
 {
 	timerRestart(timerMotor);
 	timerAlarmWrite(timerMotor, time * ONE_THOUSAND, false);

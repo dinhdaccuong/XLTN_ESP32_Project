@@ -1,4 +1,4 @@
-/*******************************************************************************
+﻿/*******************************************************************************
 **                                INCLUDES
 *******************************************************************************/
 #include "lcd_control.h"
@@ -26,7 +26,7 @@ LiquidCrystal lcd(LCD_RS, LCD_EN, LCD_D4, LCD_D5, LCD_D6, LCD_D7);
 /*******************************************************************************
 **                          FUNCTION DEFINITIONS
 *******************************************************************************/
-void lcd_init()
+void lcd_init()		// Khởi tạo LCD
 {
 	lcd.begin(16, 2);
 	lcd.clear();
@@ -40,19 +40,19 @@ void lcd_init()
 	lcd_write_string(STRING_NONE);
 }
 
-void lcd_clean()
+void lcd_clean()		// Xóa màn hình
 {
 	lcd.clear();
 }
-void lcd_write_char(char c)
+void lcd_write_char(char c)	// Ghi ký tự ra màn hình
 {
 	lcd.print(c);
 }
-void lcd_write_string(char* pc)
+void lcd_write_string(char* pc)	// Ghi chuỗi ra màn hình
 {
 	lcd.print(pc);
 }
-void lcd_set_cursor(uint8_t x, uint8_t y)
+void lcd_set_cursor(uint8_t x, uint8_t y)		// Thiết lập vị trí con trỏ
 {
 	if (y > 1)
 		return;

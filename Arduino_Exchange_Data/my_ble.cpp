@@ -116,7 +116,7 @@ class ServerCallback : public BLEServerCallbacks
 *******************************************************************************/
 void my_ble_init()
 {
-	BLEDevice::init("XLTN_CuongDD");
+	BLEDevice::init("Nhom 22 - IoT");
 
 	BLE2902* pDescriptor = new BLE2902();
     pDescriptor->setCallbacks(new DescriptorCallback_Charact1());
@@ -126,7 +126,7 @@ void my_ble_init()
         BLECharacteristic::PROPERTY_READ |
         BLECharacteristic::PROPERTY_WRITE |
         BLECharacteristic::PROPERTY_NOTIFY);
-    pCharacteristic->setValue("Phan Thu Hang");
+    pCharacteristic->setValue("Phan Hangggggg");
     pCharacteristic->addDescriptor(pDescriptor);
     pCharacteristic->setCallbacks(new CharacteristicCallback1());
 

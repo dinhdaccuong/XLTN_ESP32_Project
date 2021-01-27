@@ -1,4 +1,4 @@
-/*******************************************************************************
+﻿/*******************************************************************************
 **                                INCLUDES
 *******************************************************************************/
 #include "config.h"
@@ -19,7 +19,7 @@
 /*******************************************************************************
 **                      INTERNAL VARIABLE DEFINITIONS
 *******************************************************************************/
-led_status_e led_s = LED_OFF;
+led_status_e led_s = LED_OFF;  // led status
 /*******************************************************************************
 **                      INTERNAL FUNCTION PROTOTYPES
 *******************************************************************************/
@@ -27,13 +27,13 @@ led_status_e led_s = LED_OFF;
 /*******************************************************************************
 **                          FUNCTION DEFINITIONS
 *******************************************************************************/
-void led_init()
+void led_init()			// khởi tạo led
 {
 	pinMode(LED_PIN, OUTPUT);
 	digitalWrite(LED_PIN, HIGH);	// turn off the led
 }
 
-void led_control(ReceiveCommand command)
+void led_control(ReceiveCommand command)		// Điều khiển led dựa vào command
 {
 	switch (command)
 	{
@@ -59,11 +59,11 @@ void led_control(ReceiveCommand command)
 }
 
 
-void led_turnOn()
+void led_turnOn()		// Bật led
 {
 	digitalWrite(LED_PIN, LOW);
 }
-void led_turnOff()
+void led_turnOff()		// Tắt led
 {
 	digitalWrite(LED_PIN, HIGH);
 }
